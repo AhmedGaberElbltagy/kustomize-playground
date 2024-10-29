@@ -1,11 +1,10 @@
 pipeline {
     agent any   
-    tools {
-        gradle 'gradle'
-    }
+    // tools {
+    //     gradle 'gradle'
+    // }
     
     stages {
-     
         stage('Checkout') {
             steps {
                 checkout scm
