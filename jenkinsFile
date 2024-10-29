@@ -15,7 +15,12 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Build & Test') {
+        stage('test ') {
+            steps {
+                sh './gradlew clean test jacocoTestReport'
+            }
+        }  
+        stage('Build ') {
             steps {
                 sh './gradlew clean build'
             }
