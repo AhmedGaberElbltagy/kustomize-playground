@@ -5,11 +5,7 @@ pipeline {
     }
     
     stages {
-        stage('Cleanup Workspace') {
-            steps {
-                cleanWs()
-            }
-        }
+     
         stage('Checkout') {
             steps {
                 checkout scm
@@ -42,9 +38,6 @@ pipeline {
     }
     
     post {
-        always {
-            cleanWs()  
-        }
         success {
             echo 'Pipeline succeeded! SonarQube analysis completed.'
         }

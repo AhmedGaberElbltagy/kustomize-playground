@@ -19,10 +19,6 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 }
-checkstyle {
-    toolVersion = '8.45.1'
-    configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
-}
 
 
 test {
