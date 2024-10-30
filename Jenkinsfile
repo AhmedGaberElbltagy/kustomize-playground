@@ -13,7 +13,7 @@ pipeline {
         stage('Build & Test') {
             steps {
                 sh 'chmod +x ./gradlew'
-                sh './gradlew clean build'
+                sh './gradlew build --build-cache'
             }
         }    
         
